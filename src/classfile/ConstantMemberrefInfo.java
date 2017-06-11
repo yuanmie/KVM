@@ -7,9 +7,6 @@ public class ConstantMemberrefInfo extends ConstantInfo{
     int classIndex;
     int nameAndTypeIndex;
 
-    public ConstantMemberrefInfo(){
-
-    }
 
     public ConstantMemberrefInfo(ConstantPool cp) {
         this.cp = cp;
@@ -22,7 +19,7 @@ public class ConstantMemberrefInfo extends ConstantInfo{
     }
 
     public String ClassName(){
-        return this.cp.getClassName(this.nameAndTypeIndex);
+        return this.cp.getClassName(this.classIndex);
     }
 
     public String[] NameAndDescriptor(){

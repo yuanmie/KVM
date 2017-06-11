@@ -1,5 +1,7 @@
 package rtda;
 
+import rtda.heap.JVMObject;
+
 public class Slot {
     int num;
     JVMObject ref;

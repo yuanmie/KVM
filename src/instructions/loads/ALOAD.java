@@ -2,7 +2,7 @@ package instructions.loads;
 
 import instructions.base.Index8Instruction;
 import rtda.JVMFrame;
-import rtda.JVMObject;
+import rtda.heap.JVMObject;
 
 public class ALOAD extends Index8Instruction{
 

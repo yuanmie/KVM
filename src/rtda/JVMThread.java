@@ -1,5 +1,7 @@
 package rtda;
 
+import rtda.heap.JVMMethod;
+
 public class JVMThread {
     int pc;
     JVMStack stack;
@@ -47,5 +49,9 @@ public class JVMThread {
 
     public JVMFrame newJVMFrame(int maxLocals, int maxStack) {
         return new JVMFrame(this, maxLocals, maxStack);
+    }
+
+    public JVMFrame newJVMFrame(JVMMethod method) {
+        return new JVMFrame(this, method);
     }
 }

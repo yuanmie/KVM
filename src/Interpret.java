@@ -2,14 +2,22 @@ import classfile.CodeAttribute;
 import classfile.MemberInfo;
 import instructions.Factory;
 import instructions.base.ByteCodeReader;
+import instructions.base.Index16Instruction;
 import instructions.base.Instruction;
 import rtda.JVMFrame;
 import rtda.JVMThread;
+import rtda.heap.JVMMethod;
 import tool.Tool;
 
 public class Interpret {
     CodeAttribute codeAttr;
 
+    public Interpret(JVMMethod method){
+        JVMThread thread = new JVMThread();
+        JVMFrame frame = thread.newJVMFrame(method);
+        thread.pushFrame(frame);
+        loop(thread, method.getCode());
+    }
     public Interpret(MemberInfo methodInfo) {
         this.codeAttr = methodInfo.getCodeAttribute();
         int maxLocals = codeAttr.getMaxLocals();

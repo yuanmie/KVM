@@ -4,6 +4,7 @@ import instructions.base.Instruction;
 import instructions.comparisons.*;
 import instructions.constants.*;
 import instructions.loads.*;
+import instructions.references.*;
 import instructions.stores.*;
 import instructions.stack.*;
 import instructions.math.*;
@@ -304,12 +305,12 @@ public class Factory {
                 return new BIPUSH();
             case 0x11:
                 return new SIPUSH();
-            // case 0x12:
-            // 	return new LDC()
-            // case 0x13:
-            // 	return new LDC_W()
-            // case 0x14:
-            // 	return new LDC2_W()
+             case 0x12:
+             	return new LDC();
+             case 0x13:
+             	return new LDCW();
+             case 0x14:
+             	return new LDC2W();
             case 0x15:
                 return new ILOAD();
             case 0x16:
@@ -624,26 +625,26 @@ public class Factory {
             // 	return areturn
             // case 0xb1:
             // 	return _return
-            //	case 0xb2:
-            //		return new GET_STATIC()
-            // case 0xb3:
-            // 	return new PUT_STATIC()
-            // case 0xb4:
-            // 	return new GET_FIELD()
-            // case 0xb5:
-            // 	return new PUT_FIELD()
-            //	case 0xb6:
-            //		return new INVOKE_VIRTUAL()
-            // case 0xb7:
-            // 	return new INVOKE_SPECIAL()
+            	case 0xb2:
+            		return new GetStatic();
+             case 0xb3:
+             	return new PutStatic();
+             case 0xb4:
+             	return new GetField();
+             case 0xb5:
+             	return new PutField();
+            	case 0xb6:
+            		return new INVOKE_VIRTUAL();
+             case 0xb7:
+             	return new INVOKE_SPECIAL();
             // case 0xb8:
             // 	return new INVOKE_STATIC()
             // case 0xb9:
             // 	return new INVOKE_INTERFACE()
             // case 0xba:
             // 	return new INVOKE_DYNAMIC()
-            // case 0xbb:
-            // 	return new NEW()
+             case 0xbb:
+             	return new JVMNEW();
             // case 0xbc:
             // 	return new NEW_ARRAY()
             // case 0xbd:
@@ -652,10 +653,10 @@ public class Factory {
             // 	return arraylength
             // case 0xbf:
             // 	return athrow
-            // case 0xc0:
-            // 	return new CHECK_CAST()
-            // case 0xc1:
-            // 	return new INSTANCE_OF()
+             case 0xc0:
+             	return new CheckCast();
+             case 0xc1:
+             	return new JVMInstanceof();
             // case 0xc2:
             // 	return monitorenter
             // case 0xc3:

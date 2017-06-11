@@ -1,9 +1,8 @@
 package instructions.comparisons;
 
 import instructions.base.BranchInstruction;
-import instructions.base.NoOperandsInstruction;
 import rtda.JVMFrame;
-import rtda.JVMObject;
+import rtda.heap.JVMObject;
 import rtda.OperandStack;
 
 public class IF_ACMP extends BranchInstruction{

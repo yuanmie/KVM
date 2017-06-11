@@ -1,5 +1,7 @@
 package rtda;
 
+import rtda.heap.JVMObject;
+
 import java.nio.ByteBuffer;
 
 public class LocalVars {

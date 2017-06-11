@@ -8,6 +8,26 @@ public class MemberInfo {
     short descriptorIndex;
     AttributeInfo[] attributes;
 
+    public ConstantPool getCp() {
+        return cp;
+    }
+
+    public short getAccessFlags() {
+        return accessFlags;
+    }
+
+    public short getNameIndex() {
+        return nameIndex;
+    }
+
+    public short getDescriptorIndex() {
+        return descriptorIndex;
+    }
+
+    public AttributeInfo[] getAttributes() {
+        return attributes;
+    }
+
     public static MemberInfo[] readMembers(ClassReader cr, ConstantPool cp){
         short memberCount = cr.readUint16();
         int memberCount_U = Short.toUnsignedInt(memberCount);
@@ -15,6 +35,7 @@ public class MemberInfo {
         for(int i = 0; i < members.length; i++){
             members[i] = readMember(cr, cp);
         }
+
         return members;
     }
 
@@ -40,6 +61,15 @@ public class MemberInfo {
         for(AttributeInfo attr: this.attributes){
             if(attr instanceof CodeAttribute){
                 return (CodeAttribute) attr;
+            }
+        }
+        return null;
+    }
+
+    public ConstantValueAttribute ConstantValueAttribute() {
+        for(AttributeInfo attrInfo : this.attributes){
+            if(attrInfo instanceof ConstantValueAttribute){
+                return (ConstantValueAttribute) attrInfo;
             }
         }
         return null;

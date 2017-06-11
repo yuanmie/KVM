@@ -17,4 +17,5 @@ public class ConstantStringInfo extends ConstantInfo {
     public String string(){
         return this.cp.getUtf8(this.stringIndex);
     }
+
 }

@@ -45,11 +45,11 @@ public abstract class ConstantInfo {
             case CONSTANT_Class:
                 return new ConstantClassInfo(cp);
             case CONSTANT_Fieldref:
-                return new ConstantFieldrefInfo();
+                return new ConstantFieldrefInfo(cp);
             case CONSTANT_Methodref:
-                return new ConstantMethodrefInfo();
+                return new ConstantMethodrefInfo(cp);
             case CONSTANT_InterfaceMethodref:
-                return new ConstantInterfaceMethodrefInfo();
+                return new ConstantInterfaceMethodrefInfo(cp);
             case CONSTANT_NameAndType:
                 return new ConstantNameAndTypeInfo();
             case CONSTANT_MethodType:

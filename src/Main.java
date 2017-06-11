@@ -6,6 +6,9 @@ import cmdline.Cmd;
 import rtda.JVMFrame;
 import rtda.LocalVars;
 import rtda.OperandStack;
+import rtda.heap.JVMClass;
+import rtda.heap.JVMClassLoader;
+import rtda.heap.JVMMethod;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -22,8 +25,13 @@ public class Main {
                 , cmd.getXjreOption(), cmd.getCpOption(), cmd.getClassName(), cmd.getArgs());
 
         Classpath cp = Classpath.parse(cmd.getXjreOption(), cmd.getCpOption());
-
+        JVMClassLoader classLoader = new JVMClassLoader(cp);
         String className = cmd.getClassName().replaceAll("\\.", "/");
+        JVMClass mainClass = classLoader.loadClass(className);
+        JVMMethod mainMethod = mainClass.getMainMethod();
+        if(mainMethod != null){
+            new Interpret(mainMethod);
+        }
         ClassFile cf = loadClass(className, cp);
         printClassInfo(cf);
 

@@ -2,7 +2,7 @@ package instructions.extended;
 
 import instructions.base.BranchInstruction;
 import rtda.JVMFrame;
-import rtda.JVMObject;
+import rtda.heap.JVMObject;
 
 public class IFNONNULL extends BranchInstruction{
 

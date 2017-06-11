@@ -1,9 +1,8 @@
 package instructions.extended;
 
 import instructions.base.BranchInstruction;
-import instructions.base.ByteCodeReader;
 import rtda.JVMFrame;
-import rtda.JVMObject;
+import rtda.heap.JVMObject;
 
 public class IFNULL extends BranchInstruction{
 

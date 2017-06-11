@@ -2,7 +2,7 @@ package instructions.stores;
 
 import instructions.base.Index8Instruction;
 import rtda.JVMFrame;
-import rtda.JVMObject;
+import rtda.heap.JVMObject;
 
 public class ASTORE extends Index8Instruction{
     public void _astore(JVMFrame frame, int index){
