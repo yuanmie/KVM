@@ -1,11 +1,12 @@
 package instructions.stack;
 
 import instructions.base.Index8Instruction;
+import instructions.base.NoOperandsInstruction;
 import rtda.JVMFrame;
 import rtda.OperandStack;
 import rtda.Slot;
 
-public class DUP2_X1 extends Index8Instruction{
+public class DUP2_X1 extends NoOperandsInstruction {
     @Override
     public void execute(JVMFrame frame) {
         OperandStack stack = frame.getOperandStack();

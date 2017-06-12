@@ -60,7 +60,7 @@ public class JVMClassMember {
         return d == c;
     }
 
-    private boolean IsProtected() {
+    public boolean IsProtected() {
         return (this.accessFlag&ACCESSFLAG.ACC_PROTECTED) != 0;
 
     }

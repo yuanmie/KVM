@@ -75,6 +75,7 @@ public class JVMClass {
         this.name = cf.className();
         this.superclassName = cf.superClassName();
         this.interfaceNames = cf.InterfaceNames();
+        this.interfaces = new JVMClass[this.interfaceNames.length];
         this.cp = new JVMConstantPool(this, cf.getConstantPool());
         this.fields = JVMField.newFields(this, cf.getFields());
         this.methods = JVMMethod.newMethods(this, cf.getMethods());
@@ -136,7 +137,7 @@ public class JVMClass {
         }
     }
 
-    private boolean isImplements(JVMClass t) {
+    public boolean isImplements(JVMClass t) {
         JVMClass c = this;
         while(c != null){
             for(JVMClass i : c.interfaces){
@@ -184,4 +185,7 @@ public class JVMClass {
     }
 
 
+    public boolean isSuperClassOf(JVMClass currentClass) {
+        return currentClass.isSubClassOf(this);
+    }
 }

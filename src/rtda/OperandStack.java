@@ -82,4 +82,8 @@ public class OperandStack {
         }
         return buffer.toString();
     }
+
+    public JVMObject getRefFromTop(int i) {
+        return this.slots[(int)(this.size - 1 - i)].getRef();
+    }
 }

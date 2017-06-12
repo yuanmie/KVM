@@ -35,10 +35,12 @@ public class JVMConstantPool {
             else if(ci instanceof ConstantLongInfo){
                 ConstantLongInfo info = (ConstantLongInfo) ci;
                 this.consts[i].setLongVal(info.value());
+                i++;
             }
             else if(ci instanceof ConstantDoubleInfo){
                 ConstantDoubleInfo info = (ConstantDoubleInfo) ci;
                 this.consts[i].setDoubleVal(info.value());
+                i++;
             }
             else if(ci instanceof ConstantStringInfo){
                 ConstantStringInfo info = (ConstantStringInfo) ci;

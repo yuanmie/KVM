@@ -7,6 +7,8 @@ import java.util.Arrays;
 public class Cmd {
     boolean helpFlag;
     boolean versionFlag;
+    boolean verboseClassFlag;
+    boolean verboseInstFlag;
     String cpOption;
     String XjreOption;
     String className;
@@ -73,6 +75,7 @@ public class Cmd {
         Options options = new Options();
         //boolean型的option
         options.addOption("help",false,"help information");
+
         //当第二参数是true时，可以是这样的参数  -O4
         options.addOption("version",false,"print version and exit");
         Option c = Option.builder("cp")  //option的名字,判断的时候要使用这个名字
@@ -82,10 +85,13 @@ public class Cmd {
                 .desc("class path")  //描述
                 .build();                             //必须有
 
-        Option jre   = OptionBuilder.withArgName( "jre" )
-                .hasArg()
-                .withDescription(  "use given file for log" )
-                .create( "Xjre" );
+        Option jre   = Option.builder("Xjre")  //option的名字,判断的时候要使用这个名字
+                .required(false)               //是否必须有这个选项
+                .hasArg()                         //带一个参数
+                .argName("jre")     //参数的名字
+                .desc("jre path")  //描述
+                .build();
+
         //将c这个option添加进去
         options.addOption(c);
         options.addOption(jre);
@@ -113,6 +119,7 @@ public class Cmd {
             this.versionFlag = true;
             return;
         }
+
 
         if(cmd.hasOption("cp")){
 //          获得相应的选项（c）的参数

@@ -1,5 +1,6 @@
 package instructions;
 
+
 import instructions.base.Instruction;
 import instructions.comparisons.*;
 import instructions.constants.*;
@@ -12,6 +13,7 @@ import instructions.conversions.*;
 import instructions.extended.*;
 import instructions.control.*;
 import tool.Tool;
+
 
 public class Factory {
     static Instruction nop;
@@ -139,6 +141,11 @@ public class Factory {
     static Instruction dcmpg;
 
 
+    static final LRETURN lreturn;
+
+    static final IRETURN ireturn;
+    static final RETURN _return;
+
     static {
          nop = new NOP();
          aconst_null = new ACONST_NULL();
@@ -263,6 +270,10 @@ public class Factory {
          fcmpg = new FCMPG();
          dcmpl = new DCMPL();
          dcmpg = new DCMPG();
+
+         lreturn = new LRETURN();
+         ireturn = new IRETURN();
+         _return = new RETURN();
 
     }
 
@@ -613,18 +624,18 @@ public class Factory {
                 return new TABLE_SWITCH();
             case 0xab:
                 return new LOOKUP_SWITCH();
-            // case 0xac:
-            // 	return ireturn
-            // case 0xad:
-            // 	return lreturn
+             case 0xac:
+             	return ireturn;
+             case 0xad:
+             	return lreturn;
             // case 0xae:
             // 	return freturn
             // case 0xaf:
             // 	return dreturn
             // case 0xb0:
             // 	return areturn
-            // case 0xb1:
-            // 	return _return
+             case 0xb1:
+             	return _return;
             	case 0xb2:
             		return new GetStatic();
              case 0xb3:
@@ -637,12 +648,12 @@ public class Factory {
             		return new INVOKE_VIRTUAL();
              case 0xb7:
              	return new INVOKE_SPECIAL();
-            // case 0xb8:
-            // 	return new INVOKE_STATIC()
-            // case 0xb9:
-            // 	return new INVOKE_INTERFACE()
-            // case 0xba:
-            // 	return new INVOKE_DYNAMIC()
+             case 0xb8:
+             	return new InvokeStatic();
+             case 0xb9:
+             	return new INVOKE_INTERFACE();
+//             case 0xba:
+//             	return new INVOKE_DYNAMIC();
              case 0xbb:
              	return new JVMNEW();
             // case 0xbc:

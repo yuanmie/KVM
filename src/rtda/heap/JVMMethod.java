@@ -7,7 +7,7 @@ public class JVMMethod extends JVMClassMember{
     int maxStack;
     int maxLocals;
     byte[] code;
-
+    int argSlotCount;
     public int getMaxStack() {
         return maxStack;
     }
@@ -24,10 +24,32 @@ public class JVMMethod extends JVMClassMember{
             methods[i].klass = klass;
             methods[i].copyMemberInfo(memberInfos[i]);
             methods[i].copyAttributes(memberInfos[i]);
+            methods[i].calsArgSlotCount();
 
         }
 
         return methods;
+    }
+
+    private void calsArgSlotCount() {
+        JVMMethodDescriptor parsedDescriptor = parseMethodDescriptor(this.descriptor);
+        for(String paramType : parsedDescriptor.getParameterTypes()){
+            this.argSlotCount++;
+
+            if(paramType.equals("J") || paramType.equals("D")){
+                this.argSlotCount++;
+            }
+        }
+
+        if(!this.IsStatic()){
+            ++this.argSlotCount;
+        }
+    }
+
+    private JVMMethodDescriptor parseMethodDescriptor(String descriptor) {
+        JVMMethodDescriptorParser mdp = new JVMMethodDescriptorParser(descriptor);
+        JVMMethodDescriptor methodDescriptor = mdp.parse();
+        return methodDescriptor;
     }
 
     private void copyAttributes(MemberInfo memberInfo) {
@@ -41,5 +63,9 @@ public class JVMMethod extends JVMClassMember{
 
     public byte[] getCode() {
         return code;
+    }
+
+    public int argSlotCount() {
+        return this.argSlotCount;
     }
 }

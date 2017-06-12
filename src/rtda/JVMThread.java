@@ -54,4 +54,8 @@ public class JVMThread {
     public JVMFrame newJVMFrame(JVMMethod method) {
         return new JVMFrame(this, method);
     }
+
+    public boolean isStackEmpty() {
+        return this.stack.isEmpty();
+    }
 }

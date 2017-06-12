@@ -85,4 +85,8 @@ public class LocalVars {
         }
         return buffer.toString();
     }
+
+    public void setSlot(int i, Slot slot) {
+        this.localVals[i] = slot;
+    }
 }

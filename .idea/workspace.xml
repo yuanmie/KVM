@@ -2,39 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37d48027-0a3d-42ee-b21e-f64f8a593118" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/rtda/JVMObject.java" afterPath="$PROJECT_DIR$/src/rtda/heap/JVMObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Interpret.java" afterPath="$PROJECT_DIR$/src/Interpret.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantClassInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantClassInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantDoubleInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantDoubleInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantFieldrefInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantFieldrefInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantFloatInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantFloatInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantIntegerInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantIntegerInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantInterfaceMethodrefInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantInterfaceMethodrefInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantLongInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantLongInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantMemberrefInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantMemberrefInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantMethodrefInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantMethodrefInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/ConstantStringInfo.java" afterPath="$PROJECT_DIR$/src/classfile/ConstantStringInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/classfile/MemberInfo.java" afterPath="$PROJECT_DIR$/src/classfile/MemberInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cmdline/Cmd.java" afterPath="$PROJECT_DIR$/src/cmdline/Cmd.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/Factory.java" afterPath="$PROJECT_DIR$/src/instructions/Factory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/base/Index16Instruction.java" afterPath="$PROJECT_DIR$/src/instructions/base/Index16Instruction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/comparisons/IF_ACMP.java" afterPath="$PROJECT_DIR$/src/instructions/comparisons/IF_ACMP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/comparisons/IF_ACMPEQ.java" afterPath="$PROJECT_DIR$/src/instructions/comparisons/IF_ACMPEQ.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/extended/IFNONNULL.java" afterPath="$PROJECT_DIR$/src/instructions/extended/IFNONNULL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/extended/IFNULL.java" afterPath="$PROJECT_DIR$/src/instructions/extended/IFNULL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/loads/ALOAD.java" afterPath="$PROJECT_DIR$/src/instructions/loads/ALOAD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/DUP.java" afterPath="$PROJECT_DIR$/src/instructions/stack/DUP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stores/ASTORE.java" afterPath="$PROJECT_DIR$/src/instructions/stores/ASTORE.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stores/ASTORE_0.java" afterPath="$PROJECT_DIR$/src/instructions/stores/ASTORE_0.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/JVMFrame.java" afterPath="$PROJECT_DIR$/src/rtda/JVMFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/references/INVOKE_SPECIAL.java" afterPath="$PROJECT_DIR$/src/instructions/references/INVOKE_SPECIAL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java" afterPath="$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/DUP2.java" afterPath="$PROJECT_DIR$/src/instructions/stack/DUP2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/DUP2_X1.java" afterPath="$PROJECT_DIR$/src/instructions/stack/DUP2_X1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/DUP2_X2.java" afterPath="$PROJECT_DIR$/src/instructions/stack/DUP2_X2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/DUP_X1.java" afterPath="$PROJECT_DIR$/src/instructions/stack/DUP_X1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/DUP_X2.java" afterPath="$PROJECT_DIR$/src/instructions/stack/DUP_X2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/POP.java" afterPath="$PROJECT_DIR$/src/instructions/stack/POP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/POP2.java" afterPath="$PROJECT_DIR$/src/instructions/stack/POP2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/instructions/stack/SWAP.java" afterPath="$PROJECT_DIR$/src/instructions/stack/SWAP.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/JVMStack.java" afterPath="$PROJECT_DIR$/src/rtda/JVMStack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/JVMThread.java" afterPath="$PROJECT_DIR$/src/rtda/JVMThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/LocalVars.java" afterPath="$PROJECT_DIR$/src/rtda/LocalVars.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/OperandStack.java" afterPath="$PROJECT_DIR$/src/rtda/OperandStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/Slot.java" afterPath="$PROJECT_DIR$/src/rtda/Slot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/heap/JVMClass.java" afterPath="$PROJECT_DIR$/src/rtda/heap/JVMClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/heap/JVMClassMember.java" afterPath="$PROJECT_DIR$/src/rtda/heap/JVMClassMember.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/heap/JVMConstantPool.java" afterPath="$PROJECT_DIR$/src/rtda/heap/JVMConstantPool.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/heap/JVMInterfaceMethodRef.java" afterPath="$PROJECT_DIR$/src/rtda/heap/JVMInterfaceMethodRef.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/heap/JVMMethod.java" afterPath="$PROJECT_DIR$/src/rtda/heap/JVMMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rtda/heap/JVMMethodRef.java" afterPath="$PROJECT_DIR$/src/rtda/heap/JVMMethodRef.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,103 +42,101 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DUP.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP.java">
+      <file leaf-file-name="OperandStack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rtda/OperandStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+            <state relative-caret-position="302">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DUP2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP2.java">
+      <file leaf-file-name="LocalVars.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rtda/LocalVars.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="1512">
+              <caret line="89" column="33" lean-forward="false" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DUP2_X1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP2_X1.java">
+      <file leaf-file-name="INVOKE_VIRTUAL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DUP2_X2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP2_X2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DUP_X1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP_X1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DUP_X2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP_X2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ALOAD_1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/loads/ALOAD_1.java">
+      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/instructions/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="275" column="32" lean-forward="false" selection-start-line="275" selection-start-column="32" selection-end-line="275" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PutField.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/instructions/references/PutField.java">
+      <file leaf-file-name="RETURN.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/instructions/control/RETURN.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ALOAD.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/loads/ALOAD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="147">
+              <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ALOAD_0.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/instructions/loads/ALOAD_0.java">
+      <file leaf-file-name="JVMMemberRef.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMemberRef.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="399">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JVMFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rtda/JVMFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interpret.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Interpret.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JVMMethod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -165,7 +155,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>allocate</find>
       <find>allocat</find>
       <find>allo</find>
       <find>println</find>
@@ -195,6 +184,7 @@
       <find>nConstantMemberrefInfo</find>
       <find>newConstantMemberrefInfo</find>
       <find>new ConstantMemberrefInfo</find>
+      <find>lookupMethodInClass</find>
     </findStrings>
     <replaceStrings>
       <replace>()</replace>
@@ -232,57 +222,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/rtda/heap/ACCESSFLAG.java" />
-        <option value="$PROJECT_DIR$/src/classfile/ConstantIntegerInfo.java" />
-        <option value="$PROJECT_DIR$/src/classfile/ConstantFloatInfo.java" />
-        <option value="$PROJECT_DIR$/src/classfile/ConstantLongInfo.java" />
-        <option value="$PROJECT_DIR$/src/classfile/ConstantDoubleInfo.java" />
-        <option value="$PROJECT_DIR$/src/classfile/ConstantStringInfo.java" />
-        <option value="$PROJECT_DIR$/src/classfile/ConstantClassInfo.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/MemberRef.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMClassRef.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMMethodRef.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMInterfaceMethodRef.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/Slots.java" />
-        <option value="$PROJECT_DIR$/src/classfile/MemberInfo.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMSymRef.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMFieldRef.java" />
-        <option value="$PROJECT_DIR$/src/instructions/base/Index16Instruction.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/JVMNEW.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMField.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/PutStatic.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/GetStatic.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/PutField.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/GetField.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/JVMInstanceof.java" />
         <option value="$PROJECT_DIR$/src/rtda/heap/JVMObject.java" />
         <option value="$PROJECT_DIR$/src/rtda/heap/JVMConstant.java" />
         <option value="$PROJECT_DIR$/src/instructions/references/LDC.java" />
         <option value="$PROJECT_DIR$/src/instructions/references/lDCW.java" />
         <option value="$PROJECT_DIR$/src/instructions/references/lDC2W.java" />
-        <option value="$PROJECT_DIR$/src/Interpret.java" />
-        <option value="$PROJECT_DIR$/src/rtda/JVMThread.java" />
         <option value="$PROJECT_DIR$/src/instructions/INVOKE_VIRTUAL.java" />
         <option value="$PROJECT_DIR$/src/instructions/INVOKE_SPECIAL.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/INVOKE_SPECIAL.java" />
         <option value="$PROJECT_DIR$/src/rtda/heap/JVMMemberRef.java" />
-        <option value="$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java" />
         <option value="$PROJECT_DIR$/src/instructions/references/CheckCast.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMClassMember.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMConstantPool.java" />
         <option value="$PROJECT_DIR$/src/classfile/ConstantInfo.java" />
         <option value="$PROJECT_DIR$/src/classfile/ConstantFieldrefInfo.java" />
         <option value="$PROJECT_DIR$/src/classfile/ConstantMethodrefInfo.java" />
         <option value="$PROJECT_DIR$/src/classfile/ConstantInterfaceMethodrefInfo.java" />
         <option value="$PROJECT_DIR$/src/classfile/ConstantMemberrefInfo.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMClass.java" />
-        <option value="$PROJECT_DIR$/src/instructions/Factory.java" />
         <option value="$PROJECT_DIR$/src/instructions/LDCW.java" />
-        <option value="$PROJECT_DIR$/src/rtda/heap/JVMMethod.java" />
         <option value="$PROJECT_DIR$/src/rtda/JVMFrame.java" />
         <option value="$PROJECT_DIR$/src/instructions/stack/DUP.java" />
         <option value="$PROJECT_DIR$/src/rtda/heap/JVMClassLoader.java" />
+        <option value="$PROJECT_DIR$/src/rtda/LocalVars.java" />
+        <option value="$PROJECT_DIR$/src/instructions/base/Method_invoke_logic.java" />
+        <option value="$PROJECT_DIR$/src/instructions/control/RETURN.java" />
+        <option value="$PROJECT_DIR$/src/instructions/control/IRETURN.java" />
+        <option value="$PROJECT_DIR$/src/instructions/references/InvokeStatic.java" />
+        <option value="$PROJECT_DIR$/src/rtda/OperandStack.java" />
+        <option value="$PROJECT_DIR$/src/rtda/JVMThread.java" />
+        <option value="$PROJECT_DIR$/src/rtda/JVMStack.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMMethodDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMClassMember.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMInterfaceMethodRef.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMMethodRef.java" />
+        <option value="$PROJECT_DIR$/src/instructions/references/INVOKE_SPECIAL.java" />
+        <option value="$PROJECT_DIR$/src/instructions/references/INVOKE_INTERFACE.java" />
+        <option value="$PROJECT_DIR$/src/cmdline/Cmd.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMMethodDescriptorParser.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMClass.java" />
+        <option value="$PROJECT_DIR$/src/classfile/ConstantPool.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMConstantPool.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/DUP2.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/DUP2_X2.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/DUP2_X1.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/DUP_X1.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/DUP_X2.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/POP.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/POP2.java" />
+        <option value="$PROJECT_DIR$/src/instructions/stack/SWAP.java" />
+        <option value="$PROJECT_DIR$/src/instructions/control/LRETURN.java" />
+        <option value="$PROJECT_DIR$/src/rtda/heap/JVMMethod.java" />
+        <option value="$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java" />
+        <option value="$PROJECT_DIR$/src/instructions/Factory.java" />
+        <option value="$PROJECT_DIR$/src/Interpret.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -336,7 +326,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="rtda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rtda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="instructions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instructions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stores" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,37 +434,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JVM">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instructions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="control" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JVM">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JVM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instructions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -605,6 +652,35 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JVM">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JVM">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -614,25 +690,25 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
-    <property name="SearchEverywhereHistoryKey" value="jvmfr&#9;FILE&#9;file:///home/likai/JVM/src/rtda/JVMFrame.java&#10;local&#9;FILE&#9;file:///home/likai/JVM/src/rtda/LocalVars.java&#10;member&#9;FILE&#9;file:///home/likai/JVM/src/rtda/heap/MemberRef.java&#10;is&#9;FILE&#9;file:///home/likai/JVM/src/instructions/stores/ISTORE.java&#10;op&#9;FILE&#9;file:///home/likai/JVM/src/rtda/OperandStack.java&#10;byter&#9;FILE&#9;file:///home/likai/JVM/src/instructions/base/ByteCodeReader.java&#10;classr&#9;FILE&#9;file:///home/likai/JVM/src/classfile/ClassReader.java&#10;MAIN&#9;FILE&#9;file:///home/likai/JVM/src/Main.java" />
+    <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file:///home/likai/JVM/src/Main.java&#10;local&#9;FILE&#9;file:///home/likai/JVM/src/rtda/LocalVars.java&#10;constan&#9;FILE&#9;file:///home/likai/JVM/src/classfile/ConstantPool.java&#10;con&#9;FILE&#9;file:///home/likai/JVM/src/classfile/ConstantInfo.java&#10;jvmc&#9;FILE&#9;file:///home/likai/JVM/src/rtda/heap/JVMClass.java&#10;JVMC&#9;FILE&#9;file:///home/likai/JVM/src/rtda/heap/JVMClass.java&#10;cmd&#9;PSI&#9;JAVA://cmdline.Cmd&#10;jvmfr&#9;FILE&#9;file:///home/likai/JVM/src/rtda/JVMFrame.java&#10;member&#9;FILE&#9;file:///home/likai/JVM/src/rtda/heap/MemberRef.java&#10;is&#9;FILE&#9;file:///home/likai/JVM/src/instructions/stores/ISTORE.java&#10;op&#9;FILE&#9;file:///home/likai/JVM/src/rtda/OperandStack.java&#10;byter&#9;FILE&#9;file:///home/likai/JVM/src/instructions/base/ByteCodeReader.java&#10;classr&#9;FILE&#9;file:///home/likai/JVM/src/classfile/ClassReader.java&#10;MAIN&#9;FILE&#9;file:///home/likai/JVM/src/Main.java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/instructions/stores" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="rtda.heap" />
+      <recent name="instructions" />
+      <recent name="instructions.base" />
+      <recent name="rtda" />
+      <recent name="classfile" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="instructions.control" />
       <recent name="instructions.references" />
       <recent name="instructions.conversions" />
       <recent name="instructions.math" />
       <recent name="instructions.stores" />
-      <recent name="instructions.loads" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="instructions" />
-      <recent name="rtda.heap" />
-      <recent name="instructions.base" />
-      <recent name="rtda" />
-      <recent name="classfile" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/instructions/stores" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -939,7 +1015,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-Xjre &quot;$USER_HOME$/Downloads/jdk1.8.0_131/jre&quot; Circle" />
+      <option name="PROGRAM_PARAMETERS" value="-Xjre &quot;$USER_HOME$/Downloads/jdk1.8.0_131/jre&quot; FibonacciTest" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -974,32 +1050,33 @@
       <workItem from="1496836520317" duration="10428000" />
       <workItem from="1496923826968" duration="48915000" />
       <workItem from="1497080289321" duration="12726000" />
-      <workItem from="1497146155121" duration="12657000" />
+      <workItem from="1497146155121" duration="20527000" />
+      <workItem from="1497271932801" duration="7928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100386000" />
+    <option name="totallyTimeSpent" value="116184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1037" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33699232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38748628" sideWeight="0.50213444" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38748628" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38748628" sideWeight="0.49786553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14461046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19743863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1011,6 +1088,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1057,19 +1135,31 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/instructions/references/PutField.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/instructions/loads/ALOAD.java</url>
           <line>9</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/classfile/ConstantInfo.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="47" />
+      <option name="time" value="59" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1078,176 +1168,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/Downloads/jdk1.8.0_131/src.zip!/java/lang/Object.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/references/PutField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="62" column="33" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/base/Index16Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/JVMNEW.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="546">
+          <caret line="44" column="19" lean-forward="false" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMFieldRef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        <state relative-caret-position="473">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="29" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/JVMInstanceof.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/references/InvokeStatic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
+        <state relative-caret-position="336">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMObject.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/base/Method_invoke_logic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="273">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMethodDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMInterfaceMethodRef.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="402">
+          <caret line="63" column="27" lean-forward="true" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/JVMThread.java">
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMClassMember.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        <state relative-caret-position="243">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/instructions/references/INVOKE_SPECIAL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        <state relative-caret-position="211">
+          <caret line="41" column="32" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/references/INVOKE_INTERFACE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cmdline/Cmd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="123" column="32" lean-forward="true" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java">
+    <entry file="file://$PROJECT_DIR$/src/classfile/ClassFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="45" column="27" lean-forward="false" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/CheckCast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Downloads/jdk1.8.0_131/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="314" column="14" lean-forward="false" selection-start-line="314" selection-start-column="14" selection-end-line="314" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classfile/ConstantFieldrefInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classfile/ConstantMethodrefInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classfile/ConstantInterfaceMethodrefInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classfile/MemberInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="-85">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/classfile/ConstantInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classfile/ClassFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="-483">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1255,123 +1289,31 @@
     <entry file="file://$PROJECT_DIR$/src/classfile/ConstantPool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMConstantPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="163">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMethodRef.java">
+    <entry file="file://$PROJECT_DIR$/src/rtda/JVMThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="353">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMemberRef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/LDCW.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/JVMFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="55" lean-forward="true" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/OperandStack.java">
+    <entry file="file://$PROJECT_DIR$/src/rtda/JVMStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Interpret.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMClassMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="640" column="42" lean-forward="true" selection-start-line="640" selection-start-column="42" selection-end-line="640" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/LocalVars.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/classfile/ConstantMemberrefInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1380,64 +1322,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/LDC2W.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/instructions/references/LDCW.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="168">
           <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/PutStatic.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/references/LDC2W.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/GetField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/GetStatic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="441">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1445,15 +1353,7 @@
     <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP2_X1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1461,7 +1361,15 @@
     <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP2_X2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP2_X1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1469,7 +1377,7 @@
     <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP_X1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1477,42 +1385,208 @@
     <entry file="file://$PROJECT_DIR$/src/instructions/stack/DUP_X2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/loads/ALOAD_0.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/stack/POP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/loads/ALOAD.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/stack/POP2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/stack/SWAP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tool/Tool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/jdk1.8.0_131/src.zip!/com/sun/org/apache/bcel/internal/generic/LRETURN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="66" column="48" lean-forward="true" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/control/IRETURN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" column="55" lean-forward="false" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/control/LRETURN.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" column="54" lean-forward="true" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/loads/ALOAD_1.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/stores/LSTORE_1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/instructions/references/PutField.java">
+    <entry file="file://$PROJECT_DIR$/src/instructions/stores/LSTORE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/loads/LLOAD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/Slot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/loads/LLOAD_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMethodDescriptorParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1297">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMethodRef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-916">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/JVMFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/LocalVars.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="89" column="33" lean-forward="false" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/OperandStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rtda/heap/JVMMemberRef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/references/INVOKE_VIRTUAL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="275" column="32" lean-forward="false" selection-start-line="275" selection-start-column="32" selection-end-line="275" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/instructions/control/RETURN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Interpret.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="20" column="45" lean-forward="true" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
