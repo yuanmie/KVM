@@ -14,6 +14,13 @@ public class GetStatic extends Index16Instruction{
         JVMFieldRef fieldRef = cp.getContant(this.index).getFieldRef();
         JVMField field = fieldRef.resolvedField();
         JVMClass klass = field.klass;
+
+        if(!klass.InitStarted()){
+            frame.revertNextPc();
+            JVMClass.initClass(frame.getThread(), klass);
+            return;
+        }
+
         if(!field.IsStatic()){
             Tool.panic("java.lang.IncompatibleClassChangeError");
         }

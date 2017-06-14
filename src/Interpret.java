@@ -6,7 +6,7 @@ import instructions.base.Index16Instruction;
 import instructions.base.Instruction;
 import rtda.JVMFrame;
 import rtda.JVMThread;
-import rtda.heap.JVMMethod;
+import rtda.heap.*;
 import tool.Tool;
 
 public class Interpret {
@@ -28,6 +28,25 @@ public class Interpret {
         JVMFrame frame = thread.newJVMFrame(maxLocals, maxStack);
         thread.pushFrame(frame);
 
+    }
+
+    public Interpret(JVMMethod method, boolean log, String[] args) {
+        JVMThread thread = new JVMThread();
+        JVMFrame frame = thread.newJVMFrame(method);
+        thread.pushFrame(frame);
+        //JVMObject jargs = createArgsArray(method.klass.getLoader(), args);
+        //frame.getLocalVars().setRef(0, jargs);
+        loop(thread, log);
+    }
+
+    private JVMObject createArgsArray(JVMClassLoader loader, String[] args) {
+        JVMClass stringclass = loader.loadClass("java/lang/String");
+        JVMObject argsArr = stringclass.arrayClass().newArray(args.length);
+        JVMObject[] jargs = argsArr.Refs();
+        for(int i = 0; i < jargs.length; i++){
+            jargs[i] = JVMString.newJVMString(loader, args[i]);
+        }
+        return argsArr;
     }
 
     private void loop(JVMThread thread, boolean log) {

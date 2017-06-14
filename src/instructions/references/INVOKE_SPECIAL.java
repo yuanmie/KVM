@@ -22,7 +22,7 @@ public class INVOKE_SPECIAL extends Index16Instruction {
             Tool.panic("java.lang.IncomatibleClassChangeError");
         }
 
-        JVMObject ref = frame.getOperandStack().getRefFromTop(resolvedMethod.argSlotCount());
+        JVMObject ref = frame.getOperandStack().getRefFromTop(resolvedMethod.argSlotCount() - 1);
         if(ref == null){
             Tool.panic("java.lang.NullPointerException");
         }

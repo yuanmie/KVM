@@ -14,6 +14,11 @@ public class JVMNEW extends Index16Instruction{
         JVMConstantPool cp = frame.getMethod().klass.getCp();
         JVMClassRef classRef = cp.getContant(this.index).getClassRef();
         JVMClass klass = classRef.resolvedClass();
+        if(!klass.InitStarted()){
+            frame.revertNextPc();
+            JVMClass.initClass(frame.getThread(), klass);
+            return;
+        }
         if(klass.IsInterface() || klass.IsAbstract()){
             Tool.panic("java.lang.InstantiationError");
         }

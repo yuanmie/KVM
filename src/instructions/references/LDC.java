@@ -3,8 +3,7 @@ package instructions.references;
 import instructions.base.Index8Instruction;
 import rtda.JVMFrame;
 import rtda.OperandStack;
-import rtda.heap.JVMConstant;
-import rtda.heap.JVMConstantPool;
+import rtda.heap.*;
 import tool.Tool;
 
 public class LDC extends Index8Instruction{
@@ -15,6 +14,7 @@ public class LDC extends Index8Instruction{
 
     public static void _ldc(JVMFrame frame, int index) {
         OperandStack stack = frame.getOperandStack();
+        JVMClass klass = frame.getMethod().klass;
         JVMConstantPool cp = frame.getMethod().klass.getCp();
         JVMConstant c = cp.getContant(index);
 
@@ -24,6 +24,10 @@ public class LDC extends Index8Instruction{
                 break;
             case 2:
                 stack.pushFloat(c.getFloatVal());
+                break;
+            case JVMConstant.ISSTR:
+                JVMObject o = JVMString.newJVMString(klass.getLoader(), c.getStrVal());
+                stack.pushRef(o);
                 break;
             default:
                 Tool.panic("todl:ldc");

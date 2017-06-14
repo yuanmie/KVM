@@ -73,4 +73,8 @@ public class JVMFrame {
     public JVMThread getThread() {
         return thread;
     }
+
+    public void revertNextPc() {
+        this.nextPc = this.thread.getPc();
+    }
 }

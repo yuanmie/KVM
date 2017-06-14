@@ -69,4 +69,8 @@ public class JVMClassMember {
         return (this.accessFlag&ACCESSFLAG.ACC_PRIVATE) != 0;
 
     }
+
+    public boolean IsNative() {
+        return (this.accessFlag&ACCESSFLAG.ACC_NATIVE) != 0;
+    }
 }

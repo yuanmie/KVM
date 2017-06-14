@@ -145,8 +145,52 @@ public class Factory {
 
     static final IRETURN ireturn;
     static final RETURN _return;
+    private static Instruction arraylength;
+    private static Instruction iaload;
+    private static Instruction laload;
+    private static Instruction faload;
+    private static Instruction daload;
+    private static Instruction aaload;
+    private static Instruction baload;
+    private static Instruction caload;
+    private static Instruction saload;
+    private static Instruction iastore;
+    private static Instruction lastore;
+    private static Instruction fastore;
+    private static Instruction dastore;
+    private static Instruction aastore;
+    private static Instruction bastore;
+    private static Instruction castore;
+    private static Instruction sastore;
+    private static Instruction freturn;
+    private static Instruction dreturn;
+    private static Instruction areturn;
+
 
     static {
+
+        iaload = new IALOAD();
+        laload = new LALOAD();
+        faload = new FALOAD();
+        daload = new DALOAD();
+        aaload = new AALOAD();
+        baload = new BALOAD();
+        caload = new CALOAD();
+        saload = new SALOAD();
+
+        iastore = new IASTORE();
+        lastore = new LASTORE();
+        fastore = new FASTORE();
+        dastore = new DASTORE();
+        aastore = new AASTORE();
+        bastore = new BASTORE();
+        castore = new CASTORE();
+        sastore = new SASTORE();
+
+        freturn = new FRETURN();
+        dreturn = new DRETURN();
+        areturn = new ARETURN();
+
          nop = new NOP();
          aconst_null = new ACONST_NULL();
          iconst_m1 = new ICONST_M1();
@@ -274,6 +318,7 @@ public class Factory {
          lreturn = new LRETURN();
          ireturn = new IRETURN();
          _return = new RETURN();
+         arraylength = new Array_length();
 
     }
 
@@ -372,22 +417,22 @@ public class Factory {
                 return aload_2;
             case 0x2d:
                 return aload_3;
-            // case 0x2e:
-            // 	return iaload
-            // case 0x2f:
-            // 	return laload
-            // case 0x30:
-            // 	return faload
-            // case 0x31:
-            // 	return daload
-            // case 0x32:
-            // 	return aaload
-            // case 0x33:
-            // 	return baload
-            // case 0x34:
-            // 	return caload
-            // case 0x35:
-            // 	return saload
+             case 0x2e:
+             	return iaload;
+             case 0x2f:
+             	return laload;
+             case 0x30:
+             	return faload;
+             case 0x31:
+             	return daload;
+             case 0x32:
+             	return aaload;
+             case 0x33:
+             	return baload;
+             case 0x34:
+             	return caload;
+             case 0x35:
+             	return saload;
             case 0x36:
                 return new ISTORE();
             case 0x37:
@@ -438,22 +483,22 @@ public class Factory {
                 return astore_2;
             case 0x4e:
                 return astore_3;
-            // case 0x4f:
-            // 	return iastore
-            // case 0x50:
-            // 	return lastore
-            // case 0x51:
-            // 	return fastore
-            // case 0x52:
-            // 	return dastore
-            // case 0x53:
-            // 	return aastore
-            // case 0x54:
-            // 	return bastore
-            // case 0x55:
-            // 	return castore
-            // case 0x56:
-            // 	return sastore
+             case 0x4f:
+             	return iastore;
+             case 0x50:
+             	return lastore;
+             case 0x51:
+             	return fastore;
+             case 0x52:
+             	return dastore;
+             case 0x53:
+             	return aastore;
+             case 0x54:
+             	return bastore;
+             case 0x55:
+             	return castore;
+             case 0x56:
+             	return sastore;
             case 0x57:
                 return pop;
             case 0x58:
@@ -628,12 +673,12 @@ public class Factory {
              	return ireturn;
              case 0xad:
              	return lreturn;
-            // case 0xae:
-            // 	return freturn
-            // case 0xaf:
-            // 	return dreturn
-            // case 0xb0:
-            // 	return areturn
+             case 0xae:
+             	return freturn;
+             case 0xaf:
+             	return dreturn;
+             case 0xb0:
+             	return areturn;
              case 0xb1:
              	return _return;
             	case 0xb2:
@@ -656,12 +701,12 @@ public class Factory {
 //             	return new INVOKE_DYNAMIC();
              case 0xbb:
              	return new JVMNEW();
-            // case 0xbc:
-            // 	return new NEW_ARRAY()
-            // case 0xbd:
-            // 	return new ANEW_ARRAY()
-            // case 0xbe:
-            // 	return arraylength
+             case 0xbc:
+             	return new NEW_ARRAY();
+             case 0xbd:
+             	return new ANEW_ARRAY();
+             case 0xbe:
+             	return arraylength;
             // case 0xbf:
             // 	return athrow
              case 0xc0:

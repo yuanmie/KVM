@@ -61,7 +61,7 @@ public class OperandStack {
     public JVMObject popRef(){
         --this.size;
         JVMObject ref = this.slots[(int)this.size].getRef();
-        this.slots[(int)this.size].setRef(null);
+        //this.slots[(int)this.size].setRef(null);
         return ref;
     }
 

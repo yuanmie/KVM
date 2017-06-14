@@ -17,11 +17,16 @@ public class PutStatic extends Index16Instruction{
         JVMField field = fieldRef.resolvedField();
         JVMClass klass = field.klass;
 
+        if(!klass.InitStarted()){
+            frame.revertNextPc();
+            JVMClass.initClass(frame.getThread(), klass);
+            return;
+        }
         if(!field.IsStatic()){
             Tool.panic("java.lang.IncompatibleClassChangeError");
         }
         if(field.IsFinal()){
-            if (currentClass != klass || !currentClass.getName().equals("<clinit>")) {
+            if (currentClass != klass || !currentMethod.name.equals("<clinit>")) {
                 Tool.panic("java.lang.IllealAccessError");
             }
         }

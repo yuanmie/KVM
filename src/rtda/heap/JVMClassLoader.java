@@ -21,8 +21,22 @@ public class JVMClassLoader {
         if(this.classMap.get(name) != null){
             return this.classMap.get(name);
         }
+        
+        if(name.charAt(0) == '['){
+            return this.loadArrayClass(name);
+        }
 
         return this.loadNonArrayClass(name);
+    }
+
+    private JVMClass loadArrayClass(String name) {
+        JVMClass klass = new JVMClass(ACCESSFLAG.ACC_PUBLIC,
+                name, this, true, this.loadClass("java/lang/Object"),
+                new JVMClass[]{this.loadClass("java/lang/Cloneable"),
+                this.loadClass("java/io/Serializable")});
+
+        this.classMap.put(name, klass);
+        return klass;
     }
 
     private JVMClass loadNonArrayClass(String name) {
@@ -78,7 +92,9 @@ public class JVMClassLoader {
                     vars.setDouble(slotId, d);
                     break;
                 case "Ljava/lang/String;":
-                    Tool.panic("todo");
+                    String str = cp.getContant(cpIndex).getStrVal();
+                    JVMObject jstr = JVMString.newJVMString(klass.loader, str);
+                    vars.setRef(slotId, jstr);
             }
         }
 

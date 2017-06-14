@@ -30,7 +30,7 @@ public class Main {
         JVMClass mainClass = classLoader.loadClass(className);
         JVMMethod mainMethod = mainClass.getMainMethod();
         if(mainMethod != null){
-            new Interpret(mainMethod, false);
+            new Interpret(mainMethod, true, cmd.getArgs());
         }
         ClassFile cf = loadClass(className, cp);
         printClassInfo(cf);
