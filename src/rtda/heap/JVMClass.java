@@ -271,6 +271,15 @@ public class JVMClass {
         return null;
     }
 
+    private JVMMethod getMethod(String name, String des, boolean isStatic) {
+        for(JVMMethod method : this.methods){
+            if(method.IsStatic() == isStatic && name.equals(method.name)
+                    && des.equals(method.descriptor)){
+                return method;
+            }
+        }
+        return null;
+    }
 
     public boolean isSuperClassOf(JVMClass currentClass) {
         return currentClass.isSubClassOf(this);
@@ -415,5 +424,14 @@ public class JVMClass {
 
     public boolean isPrimitive() {
         return primitiveTypes.containsKey(this.name);
+    }
+
+    public JVMObject getRefVar(String name, String descriptor) {
+        JVMField field = this.getField(name ,descriptor, true);
+        return this.staticVars.getRef(field.slotId);
+    }
+
+    public JVMMethod getInstanceMethod(String name, String descriptor) {
+        return this.getMethod(name, descriptor, false);
     }
 }

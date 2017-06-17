@@ -9,7 +9,7 @@ public class LSHL extends NoOperandsInstruction{
     @Override
     public void execute(JVMFrame frame) {
         OperandStack stack = frame.getOperandStack();
-        long v2 = stack.popLong();
+        long v2 = stack.popInt();
         long v1 = stack.popLong();
 
         long result = v1 << v2;

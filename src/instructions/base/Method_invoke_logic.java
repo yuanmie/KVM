@@ -21,13 +21,13 @@ public class Method_invoke_logic {
         }
 
         //hack
-//        if(method.IsNative()){
-//            if(method.name.equals("registerNatives")){
-//                thread.popFrame();
-//            }else{
-//                Tool.panic(String.format("native method: %s.%s%s\n", method.klass.getName(),
-//                        method.name, method.descriptor));
-//            }
-//        }
+        if(method.IsNative()){
+            if(method.name.equals("registerNatives")){
+                thread.popFrame();
+            }else{
+                Tool.panic(String.format("native method: %s.%s%s\n", method.klass.getName(),
+                        method.name, method.descriptor));
+            }
+        }
     }
 }

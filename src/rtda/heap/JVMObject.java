@@ -4,11 +4,12 @@ import rtda.LocalVars;
 import rtda.Slot;
 import tool.Tool;
 
-public class JVMObject {
+public class JVMObject implements Cloneable{
     public JVMClass klass;
     public LocalVars fields;
     public Object extra;
-    
+
+
     public JVMObject(JVMClass klass) {
         this.klass = klass;
         this.fields = new LocalVars(klass.instanceSlotCount);
@@ -36,6 +37,16 @@ public class JVMObject {
         this.fields = new LocalVars(klass.instanceSlotCount);
         fields.setCarray(chars);
 
+    }
+
+    public JVMObject(JVMClass klass, LocalVars fields) {
+        this.klass = klass;
+        this.fields = fields;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new JVMObject(this.klass, this.fields);
     }
 
     public boolean isInstanceOf(JVMClass klass) {
@@ -100,5 +111,16 @@ public class JVMObject {
         JVMField field = this.klass.getField(name ,descriptor, false);
         LocalVars vars = this.fields;
         return vars.getRef(field.slotId);
+    }
+
+    public JVMObject jclone() {
+        JVMObject result;
+        try {
+            result =  (JVMObject) clone();
+        } catch (CloneNotSupportedException e) {
+            result = null;
+        }
+
+        return result;
     }
 }

@@ -166,6 +166,7 @@ public class Factory {
     private static Instruction freturn;
     private static Instruction dreturn;
     private static Instruction areturn;
+    private static Instruction invokeNative;
 
 
     static {
@@ -192,6 +193,7 @@ public class Factory {
         dreturn = new DRETURN();
         areturn = new ARETURN();
 
+        invokeNative = new InvokeNative();
          nop = new NOP();
          aconst_null = new ACONST_NULL();
          iconst_m1 = new ICONST_M1();
@@ -731,7 +733,7 @@ public class Factory {
             // case 0xc9:
             // 	return new JSR_W()
             // case 0xca: breakpoint
-            case 0xfe: return new InvokeNative();
+            case 0xfe: return invokeNative;
             // case 0xff: impdep2
             default:
                 Tool.panic(String.format("Unsupported opcode: 0x%x!", opcode));

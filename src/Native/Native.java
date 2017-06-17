@@ -1,5 +1,6 @@
 package Native;
 
+import instructions.base.Method_invoke_logic;
 import rtda.JVMFrame;
 import rtda.LocalVars;
 import rtda.heap.*;
@@ -91,6 +92,48 @@ public class Native {
         JVMObject interned = JVMString.internString(t);
         frame.getOperandStack().pushRef(interned);
     };
+    private static Consumer<JVMFrame> jhashCode = (frame) ->
+    {
+        JVMObject t = frame.getLocalVars().getThis();
+        frame.getOperandStack().pushInt(t.hashCode());
+    };
+    private static Consumer<JVMFrame> intBitsToFloat = (frame) ->
+    {
+        int bits = frame.getLocalVars().getInt(0);
+        float value = Float.intBitsToFloat(bits);
+        frame.getOperandStack().pushFloat(value);
+    };
+
+    private static Consumer<JVMFrame> longBitsToDouble = (frame) ->
+    {
+        long bits = frame.getLocalVars().getLong(0);
+        double value = Double.longBitsToDouble(bits);
+        frame.getOperandStack().pushDouble(value);
+    };
+    private static Consumer<JVMFrame> jclone = (frame) ->
+    {
+        JVMObject t = frame.getLocalVars().getThis();
+        JVMClass cloneable = t.klass.getLoader().loadClass("java/lang/Cloneable");
+        if(!t.klass.isImplements(cloneable)){
+            Tool.panic("java.lang.CloneNotSupportedException");
+        }
+        frame.getOperandStack().pushRef(t.jclone());
+    };
+    private static Consumer<JVMFrame> initialize = (frame) ->
+    {
+        JVMClass vmclass = frame.getMethod().klass;
+        JVMObject savedProps = vmclass.getRefVar("savedProps", "Ljava/util/Properties;");
+        JVMObject key = JVMString.newJVMString(vmclass.getLoader(), "foo");
+        JVMObject val = JVMString.newJVMString(vmclass.getLoader(), "bar");
+        frame.getOperandStack().pushRef(savedProps);
+        frame.getOperandStack().pushRef(key);
+        frame.getOperandStack().pushRef(val);
+
+        JVMClass propsClass = vmclass.getLoader().loadClass("java/util/Properties");
+        JVMMethod setPropMethod = propsClass.getInstanceMethod("setProperty",
+                "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;");
+        Method_invoke_logic.InvokeMethod(frame, setPropMethod);
+    };
 
     private static void ArrayCopy(JVMObject src, JVMObject dest, int srcPos, int destPos, int length) {
         switch (src.fields.getArrayType()){
@@ -175,10 +218,22 @@ public class Native {
                 "(Ljava/lang/Object;ILjava/lang/Object;II)V", arraycopy);
         register("java/lang/Float", "floatToRawIntBits",
                 "(F)I", floatToRawIntBits);
+        register("java/lang/Float", "intBitsToFloat",
+                "(I)F", intBitsToFloat);
         register("java/lang/Double", "doubleToRawLongBits",
                 "(D)J", doubleToRawLongBits);
 
+        register("java/lang/Double", "longBitsToDouble", "(J)D", longBitsToDouble);
         register("java/lang/String", "intern", "()Ljava/lang/String;"
         , intern);
+
+        register("java/lang/Object", "getClass", "()Ljava/lang/Class;",
+                getClass);
+
+        register("java/lang/Object", "hashCode", "()I", jhashCode);
+
+        register("java/lang/Object", "clone", "()Ljava/lang/Object;", jclone);
+
+        register("sun/misc/VM", "initialize", "()V", initialize);
     }
 }
