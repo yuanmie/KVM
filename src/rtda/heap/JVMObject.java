@@ -7,7 +7,8 @@ import tool.Tool;
 public class JVMObject {
     public JVMClass klass;
     public LocalVars fields;
-
+    public Object extra;
+    
     public JVMObject(JVMClass klass) {
         this.klass = klass;
         this.fields = new LocalVars(klass.instanceSlotCount);

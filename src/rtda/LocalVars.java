@@ -194,4 +194,8 @@ public class LocalVars {
     public void setSlot(int i, Slot slot) {
         this.localVals[i] = slot;
     }
+
+    public JVMObject getThis() {
+        return getRef(0);
+    }
 }

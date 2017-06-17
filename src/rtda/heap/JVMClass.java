@@ -23,8 +23,20 @@ public class JVMClass {
     int staticSlotCount;
     LocalVars staticVars;
 
+    public JVMClass(int accessFlag, String name, JVMClassLoader loader, boolean initStarted) {
+        this.accessFlag = accessFlag;
+        this.name = name;
+        this.loader = loader;
+        this.initStarted = initStarted;
+    }
+
+    public JVMObject getJclass() {
+        return jclass;
+    }
+
+    JVMObject jclass;
     boolean initStarted; //if class has init
-    private static HashMap<String, String> primitiveTypes;
+    public static HashMap<String, String> primitiveTypes;
     static{
         primitiveTypes = new HashMap<>();
         primitiveTypes.put("void", "V");
@@ -395,5 +407,9 @@ public class JVMClass {
             c = c.superclass;
         }
         return null;
+    }
+
+    public String javaName() {
+        return this.name.replaceAll("/", ".");
     }
 }

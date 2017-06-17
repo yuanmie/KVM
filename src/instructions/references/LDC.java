@@ -29,6 +29,11 @@ public class LDC extends Index8Instruction{
                 JVMObject o = JVMString.newJVMString(klass.getLoader(), c.getStrVal());
                 stack.pushRef(o);
                 break;
+            case JVMConstant.ISCLASSREF:
+                JVMClassRef ref = c.getClassRef();
+                Object o1 = ref.resolvedClass().getJclass();
+                stack.pushRef((JVMObject) o1);
+                break;
             default:
                 Tool.panic("todl:ldc");
         }

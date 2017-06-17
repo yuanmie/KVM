@@ -1,4 +1,4 @@
-package jvmgo.book.ch08;
+
 
 public class BubbleSortTest {
     
@@ -9,8 +9,8 @@ public class BubbleSortTest {
         };
 
         //printArray(arr);
-        //bubbleSort(arr);
-        System.out.println("123456789);
+        bubbleSort(arr);
+        //System.out.println("123456789");
         printArray(arr);
     }
     

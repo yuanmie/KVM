@@ -21,7 +21,7 @@ public class PutField extends Index16Instruction {
             Tool.panic("java.lang.IncompatibleClassChangeError");
         }
         if(field.IsFinal()){
-            if (currentClass != field.klass || !currentClass.getName().equals("<init>")) {
+            if (currentClass != field.klass || !currentMethod.name.equals("<init>")) {
                 Tool.panic("java.lang.IllealAccessError");
             }
         }

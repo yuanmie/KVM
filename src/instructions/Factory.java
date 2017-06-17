@@ -6,6 +6,7 @@ import instructions.comparisons.*;
 import instructions.constants.*;
 import instructions.loads.*;
 import instructions.references.*;
+import instructions.reserved.InvokeNative;
 import instructions.stores.*;
 import instructions.stack.*;
 import instructions.math.*;
@@ -730,7 +731,7 @@ public class Factory {
             // case 0xc9:
             // 	return new JSR_W()
             // case 0xca: breakpoint
-            // case 0xfe: impdep1
+            case 0xfe: return new InvokeNative();
             // case 0xff: impdep2
             default:
                 Tool.panic(String.format("Unsupported opcode: 0x%x!", opcode));

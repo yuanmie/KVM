@@ -24,15 +24,31 @@ public class JVMMethod extends JVMClassMember{
             methods[i].klass = klass;
             methods[i].copyMemberInfo(memberInfos[i]);
             methods[i].copyAttributes(memberInfos[i]);
-            methods[i].calsArgSlotCount();
-
+            JVMMethodDescriptor parsedDescriptor = parseMethodDescriptor(methods[i].descriptor);
+            methods[i].calsArgSlotCount(parsedDescriptor);
+            if(methods[i].isNative()){
+                methods[i].injetCodeAttribute(parsedDescriptor.returnType);
+            }
         }
 
         return methods;
     }
 
-    private void calsArgSlotCount() {
-        JVMMethodDescriptor parsedDescriptor = parseMethodDescriptor(this.descriptor);
+    private void injetCodeAttribute(String returnType) {
+        this.maxStack = 4;
+        this.maxLocals = this.argSlotCount;
+        switch (returnType.charAt(0)){
+            case 'V': this.code = new byte[]{(byte)0xfe, (byte)0xb1};break;
+            case 'D': this.code = new byte[]{(byte)0xfe, (byte)0xaf};break;
+            case 'F': this.code = new byte[]{(byte)0xfe, (byte)0xae};break;
+            case 'J': this.code = new byte[]{(byte)0xfe, (byte)0xad};break;
+            case 'L' : case '[': this.code = new byte[]{(byte)0xfe, (byte)0xb0};break;
+            default:
+                this.code = new byte[]{(byte)0xfe, (byte)0xac};
+        }
+    }
+
+    private void calsArgSlotCount(JVMMethodDescriptor parsedDescriptor) {
         for(String paramType : parsedDescriptor.getParameterTypes()){
             this.argSlotCount++;
 
@@ -46,7 +62,7 @@ public class JVMMethod extends JVMClassMember{
         }
     }
 
-    private JVMMethodDescriptor parseMethodDescriptor(String descriptor) {
+    private static JVMMethodDescriptor parseMethodDescriptor(String descriptor) {
         JVMMethodDescriptorParser mdp = new JVMMethodDescriptorParser(descriptor);
         JVMMethodDescriptor methodDescriptor = mdp.parse();
         return methodDescriptor;
@@ -67,5 +83,10 @@ public class JVMMethod extends JVMClassMember{
 
     public int argSlotCount() {
         return this.argSlotCount;
+    }
+
+    public boolean isNative() {
+        return (this.accessFlag&ACCESSFLAG.ACC_NATIVE) != 0;
+
     }
 }

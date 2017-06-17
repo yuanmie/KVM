@@ -7,26 +7,69 @@ import rtda.LocalVars;
 import tool.Tool;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class JVMClassLoader {
     Classpath cp;
-    HashMap<String, JVMClass> classMap;
+    Map<String, JVMClass> classMap;
 
     public JVMClassLoader(Classpath cp) {
         this.cp = cp;
         this.classMap = new HashMap<>();
     }
 
+    public static JVMClassLoader newJVMClassLoader(Classpath cp){
+        JVMClassLoader cl = new JVMClassLoader(cp);
+        cl.loadBasicClasses();
+        cl.loadPrimitiveClasses();
+        return cl;
+    }
+    public void loadBasicClasses(){
+        JVMClass jlclassClass = this.loadClass("java/lang/Class");
+        for(Map.Entry<String, JVMClass> e : classMap.entrySet()){
+            JVMClass c = e.getValue();
+            if(c.jclass == null){
+                c.jclass = jlclassClass.newObject();
+                c.jclass.extra = c;
+                int a = 1;
+            }
+        }
+    }
+
+    public void loadPrimitiveClasses(){
+        for (String primitiveType :JVMClass.primitiveTypes.keySet()){
+            this.loadPrimitiveClass(primitiveType);
+        }
+    }
+
+    private void loadPrimitiveClass(String className) {
+        JVMClass c = new JVMClass(ACCESSFLAG.ACC_PUBLIC,
+                className,
+                this,
+                true);
+
+        c.jclass = this.classMap.get("java/lang/Class").newObject();
+        c.jclass.extra = c;
+        this.classMap.put(className, c);
+    }
+
     public JVMClass loadClass(String name){
         if(this.classMap.get(name) != null){
             return this.classMap.get(name);
         }
-        
+        JVMClass c;
         if(name.charAt(0) == '['){
-            return this.loadArrayClass(name);
+            c =  this.loadArrayClass(name);
+        }else{
+            c =  this.loadNonArrayClass(name);
         }
 
-        return this.loadNonArrayClass(name);
+        if(classMap.get("java/lang/Class") != null){
+            JVMClass temp = classMap.get("java/lang/Class");
+            c.jclass = temp.newObject();
+            c.jclass.extra = c;
+        }
+        return c;
     }
 
     private JVMClass loadArrayClass(String name) {

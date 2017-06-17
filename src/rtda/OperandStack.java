@@ -86,4 +86,8 @@ public class OperandStack {
     public JVMObject getRefFromTop(int i) {
         return this.slots[(int)(this.size - 1 - i)].getRef();
     }
+
+    public void pushBoolean(boolean b) {
+        this.pushInt((b ? 1 : 0));
+    }
 }

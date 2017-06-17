@@ -41,7 +41,7 @@ public class INVOKE_VIRTUAL extends Index16Instruction {
             Tool.panic("java.lang.IllegalAccessError");
         }
 
-        JVMMethod methodToBeInvoked  = JVMMethodRef.lookupMethodInClass(currentClass.getSuperclass(),
+        JVMMethod methodToBeInvoked  = JVMMethodRef.lookupMethodInClass(ref.klass,
                     methodRef.getName(), methodRef.getDescriptor());
 
         if(methodToBeInvoked == null || methodToBeInvoked.IsAbstract()){
@@ -87,7 +87,7 @@ public class INVOKE_VIRTUAL extends Index16Instruction {
         stack.popRef();
     }
 
-    private Object toJVMString(JVMObject jstr) {
+    private String toJVMString(JVMObject jstr) {
         JVMObject o = jstr.getRefVar("value", "[C");
         return new String(o.Chars());
     }

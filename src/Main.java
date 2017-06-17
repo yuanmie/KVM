@@ -1,3 +1,4 @@
+import Native.Native;
 import classfile.ClassFile;
 import classfile.MemberInfo;
 import classpath.Classpath;
@@ -17,7 +18,12 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Cmd cmd = new Cmd(args);
+        init();
         startJVM(cmd);
+    }
+
+    private static void init() {
+        Native.init();
     }
 
     public static void startJVM(Cmd cmd) throws IOException {
@@ -25,18 +31,18 @@ public class Main {
                 , cmd.getXjreOption(), cmd.getCpOption(), cmd.getClassName(), cmd.getArgs());
 
         Classpath cp = Classpath.parse(cmd.getXjreOption(), cmd.getCpOption());
-        JVMClassLoader classLoader = new JVMClassLoader(cp);
+        JVMClassLoader classLoader = JVMClassLoader.newJVMClassLoader(cp);
         String className = cmd.getClassName().replaceAll("\\.", "/");
         JVMClass mainClass = classLoader.loadClass(className);
         JVMMethod mainMethod = mainClass.getMainMethod();
         if(mainMethod != null){
             new Interpret(mainMethod, true, cmd.getArgs());
         }
-        ClassFile cf = loadClass(className, cp);
-        printClassInfo(cf);
-
-        MemberInfo _main = getMainMethod(cf);
-        new Interpret(_main);
+//        ClassFile cf = loadClass(className, cp);
+//        printClassInfo(cf);
+//
+//        MemberInfo _main = getMainMethod(cf);
+//        new Interpret(_main);
         /*
         success to read object.class.good job
 
@@ -44,10 +50,11 @@ public class Main {
         System.out.println(Arrays.toString(r.getData()));
         //FileUtils.writeByteArrayToFile(new File("pathname.class"), r.getData());
         */
-        JVMFrame frame = new JVMFrame(100, 100);
-        testLocalVars(frame.getLocalVars());
-        System.out.println("===========================");
-        testOperandStack(frame.getOperandStack());
+
+//        JVMFrame frame = new JVMFrame(100, 100);
+//        testLocalVars(frame.getLocalVars());
+//        System.out.println("===========================");
+//        testOperandStack(frame.getOperandStack());
     }
 
     private static MemberInfo getMainMethod(ClassFile cf) {
