@@ -2,7 +2,7 @@ package rtda.heap;
 
 
 import java.util.HashMap;
-
+import Native.Native;
 public class JVMString {
     static HashMap<String, JVMObject> map = new HashMap<>();
     public static JVMObject newJVMString(JVMClassLoader loader, String str){
@@ -15,5 +15,14 @@ public class JVMString {
         jvmstr.setRefVar("value", "[C", jchars);
         map.put(str, jvmstr);
         return jvmstr;
+    }
+
+    public static JVMObject internString(JVMObject t) {
+         String str = Native.toJVMString(t);
+         if(map.containsKey(str)){
+             return map.get(str);
+         }
+         map.put(str, t);
+         return t;
     }
 }

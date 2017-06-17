@@ -13,11 +13,8 @@ public class INVOKE_VIRTUAL extends Index16Instruction {
         JVMClass currentClass = frame.getMethod().klass;
         JVMConstantPool cp = currentClass.getCp();
         JVMMethodRef methodRef = cp.getContant(this.index).getMethodRef();
-        JVMClass resolvedClass = methodRef.resolvedClass();
+        //JVMClass resolvedClass = methodRef.resolvedClass();
         JVMMethod resolvedMethod = methodRef.resolvedMethod();
-        if(resolvedMethod.name.equals("<init>") && resolvedMethod.klass != resolvedClass){
-            Tool.panic("java.lang.NoSuchMethodError");
-        }
 
 
         if(resolvedMethod.IsStatic()){

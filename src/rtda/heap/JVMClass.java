@@ -323,7 +323,7 @@ public class JVMClass {
         }
     }
 
-    private boolean IsArray() {
+    public boolean IsArray() {
        return this.name.charAt(0) == '[';
     }
 
@@ -411,5 +411,9 @@ public class JVMClass {
 
     public String javaName() {
         return this.name.replaceAll("/", ".");
+    }
+
+    public boolean isPrimitive() {
+        return primitiveTypes.containsKey(this.name);
     }
 }
