@@ -24,7 +24,7 @@ public class JVMInterfaceMethodRef extends JVMMemberRef{
         if(!c.IsInterface()){
             Tool.panic("java.lang.IncompatibleClassChangeError");
         }
-        JVMMethod method = lookupMethod(c, this.name, this.descriptor);
+        JVMMethod method = lookupMethodInInterface(c, this.name, this.descriptor);
         if(method == null){
             Tool.panic("java.lang.NoSuchMethodError");
         }
@@ -34,10 +34,10 @@ public class JVMInterfaceMethodRef extends JVMMemberRef{
         this.method = method;
     }
 
-    private JVMMethod lookupMethod(JVMClass c, String name, String descriptor) {
+    private JVMMethod lookupMethodInInterface(JVMClass c, String name, String descriptor) {
         for(JVMMethod m : c.methods){
             if(name.equals(m.name) && descriptor.equals(m.descriptor)){
-                return method;
+                return m;
             }
         }
 
@@ -48,7 +48,7 @@ public class JVMInterfaceMethodRef extends JVMMemberRef{
         for(JVMClass i : interfaces){
             for(JVMMethod m : i.methods){
                 if(name.equals(m.name) && descriptor.equals(m.descriptor)){
-                    return method;
+                    return m;
                 }
             }
 

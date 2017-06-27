@@ -9,6 +9,7 @@ public class Slot {
     int assertType = 0;
     final int NUMTYPE = 0;
     final int OBJECTTYPE = 1;
+    final int NULLTYPE = 2;
     public Slot(){
 
     }
@@ -28,10 +29,16 @@ public class Slot {
 //        if(this.assertType != OBJECTTYPE){
 //            return null;
 //        }
+
+
         return ref;
     }
 
     public void setRef(JVMObject ref) {
+        if(ref == null){
+            this.assertType = NULLTYPE;
+            return;
+        }
         this.assertType = OBJECTTYPE;
         this.ref = ref;
     }

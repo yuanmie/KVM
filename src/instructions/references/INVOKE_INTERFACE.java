@@ -21,21 +21,21 @@ public class INVOKE_INTERFACE implements Instruction {
     public void execute(JVMFrame frame) {
         JVMClass currentClass = frame.getMethod().klass;
         JVMConstantPool cp = currentClass.getCp();
-        JVMMethodRef methodRef = cp.getContant(this.index).getMethodRef();
+        JVMInterfaceMethodRef methodRef = cp.getContant(this.index).getInterfaceMethodRef();
         JVMMethod resolvedMethod = methodRef.resolvedMethod();
 
-        if(resolvedMethod.IsStatic()){
+        if(resolvedMethod.IsStatic() || resolvedMethod.isPrivate()){
             Tool.panic("java.lang.IncomatibleClassChangeError");
         }
 
-        JVMObject ref = frame.getOperandStack().getRefFromTop(resolvedMethod.argSlotCount());
+        JVMObject ref = frame.getOperandStack().getRefFromTop(resolvedMethod.argSlotCount() - 1);
         if(ref == null){
             Tool.panic("java.lang.NullPointerException");
         }
 
-        if(!ref.klass.isImplements(methodRef.resolvedClass())){
-            Tool.panic("java.lang.IllegalAccessError");
-        }
+//        if(!ref.klass.isImplements(methodRef.resolvedClass())){
+//            Tool.panic("java.lang.IncompatibleClassChangeError");
+//        }
 
         JVMMethod methodToBeInvoked = JVMMethodRef.lookupMethodInClass(ref.klass,
                     methodRef.getName(), methodRef.getDescriptor());

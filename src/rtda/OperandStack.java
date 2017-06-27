@@ -54,15 +54,31 @@ public class OperandStack {
     }
 
     public void pushRef(JVMObject ref){
-        this.slots[(int)this.size].setRef(ref);
+        if(this.slots[(int)this.size] == null){
+            this.slots[(int)this.size] = new Slot();
+        }
+        
+        if(ref == null){
+            if(this.slots[(int)this.size] == null){
+                this.slots[(int)this.size] = new Slot();
+            }
+            this.slots[(int)this.size] = null;
+        }else{
+            this.slots[(int)this.size].setRef(ref);
+        }
+
         ++this.size;
     }
 
     public JVMObject popRef(){
         --this.size;
-        JVMObject ref = this.slots[(int)this.size].getRef();
-        //this.slots[(int)this.size].setRef(null);
-        return ref;
+        Slot s = this.slots[(int)this.size];
+        if(s == null){
+            return null;
+        }else{
+            //this.slots[(int)this.size].setRef(null);
+            return s.getRef();
+        }
     }
 
     public void pushSlot(Slot slot){
@@ -84,6 +100,9 @@ public class OperandStack {
     }
 
     public JVMObject getRefFromTop(int i) {
+        if(this.slots[(int)(this.size - 1 - i)] == null){
+            return null;
+        }
         return this.slots[(int)(this.size - 1 - i)].getRef();
     }
 

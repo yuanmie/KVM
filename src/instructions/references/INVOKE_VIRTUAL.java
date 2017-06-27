@@ -1,5 +1,7 @@
 package instructions.references;
-
+/*
+problem:setREf(null)的问题,多个槽引用了同一个ref,设置为null的时候,同时设置为空了.
+ */
 import instructions.base.Index16Instruction;
 import instructions.base.Method_invoke_logic;
 import rtda.JVMFrame;
@@ -13,7 +15,6 @@ public class INVOKE_VIRTUAL extends Index16Instruction {
         JVMClass currentClass = frame.getMethod().klass;
         JVMConstantPool cp = currentClass.getCp();
         JVMMethodRef methodRef = cp.getContant(this.index).getMethodRef();
-        JVMClass resolvedClass = methodRef.resolvedClass();
         JVMMethod resolvedMethod = methodRef.resolvedMethod();
 
 
