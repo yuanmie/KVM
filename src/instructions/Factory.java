@@ -722,8 +722,8 @@ public class Factory {
             // 	return monitorexit
             case 0xc4:
                 return new WIDE();
-            // case 0xc5:
-            // 	return new MULTI_ANEW_ARRAY()
+             case 0xc5:
+             	return new MULTI_ANEW_ARRAY();
             case 0xc6:
                 return new IFNULL();
             case 0xc7:

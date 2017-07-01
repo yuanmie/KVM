@@ -15,6 +15,7 @@ public class OperandStack {
     }
 
     public void pushInt(int val){
+        dealSlot();
         this.slots[(int)this.size].setNum(val);
         ++this.size;
     }
@@ -54,20 +55,23 @@ public class OperandStack {
     }
 
     public void pushRef(JVMObject ref){
-        if(this.slots[(int)this.size] == null){
-            this.slots[(int)this.size] = new Slot();
-        }
-        
+
+        dealSlot();
         if(ref == null){
-            if(this.slots[(int)this.size] == null){
-                this.slots[(int)this.size] = new Slot();
-            }
             this.slots[(int)this.size] = null;
         }else{
             this.slots[(int)this.size].setRef(ref);
         }
 
         ++this.size;
+    }
+
+    /*
+    赋一个新的slot.
+     */
+    private void dealSlot(){
+        this.slots[(int)this.size] = null;
+        this.slots[(int)this.size] = new Slot();
     }
 
     public JVMObject popRef(){

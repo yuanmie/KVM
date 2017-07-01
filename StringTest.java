@@ -10,7 +10,7 @@ public class StringTest {
 
         int x = 1;
         String s3 = "abc" + x;
-        System.out.println(s1 == s3);
+        System.out.println(s3);
 
         s3 = s3.intern();
         System.out.println(s1 == s3);

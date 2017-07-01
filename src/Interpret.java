@@ -34,8 +34,8 @@ public class Interpret {
         JVMThread thread = new JVMThread();
         JVMFrame frame = thread.newJVMFrame(method);
         thread.pushFrame(frame);
-        //JVMObject jargs = createArgsArray(method.klass.getLoader(), args);
-        //frame.getLocalVars().setRef(0, jargs);
+        JVMObject jargs = createArgsArray(method.klass.getLoader(), args);
+        frame.getLocalVars().setRef(0, jargs);
         loop(thread, log);
     }
 

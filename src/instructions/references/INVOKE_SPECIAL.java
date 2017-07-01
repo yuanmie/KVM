@@ -23,7 +23,6 @@ public class INVOKE_SPECIAL extends Index16Instruction {
         }
 
         /*
-        todo:if need -1
          */
         JVMObject ref = frame.getOperandStack().getRefFromTop(resolvedMethod.argSlotCount() - 1);
         if(ref == null){

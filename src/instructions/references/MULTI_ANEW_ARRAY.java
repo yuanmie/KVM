@@ -29,6 +29,7 @@ public class MULTI_ANEW_ARRAY implements Instruction{
         OperandStack stack = frame.getOperandStack();
         int[] counts = popAndCheckCounts(stack, this.dimensions);
         JVMObject arr = newMultiDimensionalArray(counts, arrClass);
+        stack.pushRef(arr);
     }
 
     private int[] popAndCheckCounts(OperandStack stack, int dimensions) {

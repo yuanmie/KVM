@@ -1,0 +1,2 @@
+operatorstack中的多个slot可以相同,故putref时极易引发bug--本意只修改一个槽
+,结果其他的槽也修改了,导致错误的发生.

@@ -180,6 +180,9 @@ public class LocalVars {
     }
 
     public JVMObject getRef(int index){
+        if(this.localVals[index] == null){
+            int debugflag = 1;
+        }
         return this.localVals[index].getRef();
     }
 

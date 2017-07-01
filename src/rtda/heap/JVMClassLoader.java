@@ -31,7 +31,6 @@ public class JVMClassLoader {
             if(c.jclass == null){
                 c.jclass = jlclassClass.newObject();
                 c.jclass.extra = c;
-                int a = 1;
             }
         }
     }
