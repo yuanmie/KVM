@@ -167,10 +167,12 @@ public class Factory {
     private static Instruction dreturn;
     private static Instruction areturn;
     private static Instruction invokeNative;
+    private static Instruction athrow;
 
 
     static {
 
+        athrow = new ATHROW();
         iaload = new IALOAD();
         laload = new LALOAD();
         faload = new FALOAD();
@@ -710,8 +712,8 @@ public class Factory {
              	return new ANEW_ARRAY();
              case 0xbe:
              	return arraylength;
-            // case 0xbf:
-            // 	return athrow
+             case 0xbf:
+             	return athrow;
              case 0xc0:
              	return new CheckCast();
              case 0xc1:

@@ -16,7 +16,7 @@ public class Method_invoke_logic {
         if(argSlot > 0){
             for(int i = argSlot - 1; i >= 0; i--){
                 Slot slot = invokerFrame.getOperandStack().popSlot();
-                newFrame.getLocalVars().setSlot(i, slot);
+                newFrame.getLocalVars().setSlot(i, new Slot(slot));
             }
         }
 

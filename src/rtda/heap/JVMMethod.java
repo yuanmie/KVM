@@ -1,6 +1,7 @@
 package rtda.heap;
 
 import classfile.CodeAttribute;
+import classfile.LineNumberTableAttribute;
 import classfile.MemberInfo;
 
 public class JVMMethod extends JVMClassMember{
@@ -8,6 +9,8 @@ public class JVMMethod extends JVMClassMember{
     int maxLocals;
     byte[] code;
     int argSlotCount;
+    JVMExceptionTable exceptionTable;
+    private LineNumberTableAttribute lineNumberTable;
     public int getMaxStack() {
         return maxStack;
     }
@@ -74,7 +77,20 @@ public class JVMMethod extends JVMClassMember{
             this.maxLocals = codeAttribute.getMaxLocals();
             this.maxStack = codeAttribute.getMaxStack();
             this.code = codeAttribute.getCode();
+            this.exceptionTable = new JVMExceptionTable(codeAttribute.getExceptionTable(),
+                    this.klass.getCp());
+            this.lineNumberTable = codeAttribute.getLineNumberTableAttribute();
         }
+    }
+
+    public int getLineNumber(int pc){
+        if(this.isNative()){
+            return -2;
+        }
+        if(this.lineNumberTable == null){
+            return -1;
+        }
+        return this.lineNumberTable.getLineNumber(pc);
     }
 
     public byte[] getCode() {
@@ -88,5 +104,13 @@ public class JVMMethod extends JVMClassMember{
     public boolean isNative() {
         return (this.accessFlag&ACCESSFLAG.ACC_NATIVE) != 0;
 
+    }
+
+    public int findExceptionHandler(JVMClass exClass, int pc){
+        JVMExceptionHandler handler = this.exceptionTable.findExceptionHandler(exClass, pc);
+        if(handler != null){
+            return handler.getHandlerPc();
+        }
+        return -1;
     }
 }

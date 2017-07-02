@@ -84,4 +84,13 @@ public class CodeAttribute implements AttributeInfo {
         }
         return exceptionTable;
     }
+
+    public LineNumberTableAttribute getLineNumberTableAttribute() {
+        for(AttributeInfo attr : this.attributes){
+            if(attr instanceof LineNumberTableAttribute){
+                return (LineNumberTableAttribute) attr;
+            }
+        }
+        return null;
+    }
 }

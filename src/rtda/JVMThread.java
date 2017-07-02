@@ -58,4 +58,12 @@ public class JVMThread {
     public boolean isStackEmpty() {
         return this.stack.isEmpty();
     }
+
+    public void clearStack() {
+        this.stack.clear();
+    }
+
+    public JVMFrame[] getFrames() {
+        return this.stack.getFrames();
+    }
 }

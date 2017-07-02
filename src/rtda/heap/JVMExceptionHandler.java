@@ -1,12 +1,12 @@
-package classfile;
+package rtda.heap;
 
-public class ExceptionTableEntry {
-    int startPc;
-    int endPc;
-    int handlerPc;
-    int catchType;
+public class JVMExceptionHandler {
+    private int startPc;
+    private int endPc;
+    private int handlerPc;
+    private JVMClassRef catchType;
 
-    public ExceptionTableEntry(int startPc, int endPc, int handlerPc, int catchType) {
+    public JVMExceptionHandler(int startPc, int endPc, int handlerPc, JVMClassRef catchType) {
         this.startPc = startPc;
         this.endPc = endPc;
         this.handlerPc = handlerPc;
@@ -37,11 +37,11 @@ public class ExceptionTableEntry {
         this.handlerPc = handlerPc;
     }
 
-    public int getCatchType() {
+    public JVMClassRef getCatchType() {
         return catchType;
     }
 
-    public void setCatchType(int catchType) {
+    public void setCatchType(JVMClassRef catchType) {
         this.catchType = catchType;
     }
 }

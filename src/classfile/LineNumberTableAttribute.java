@@ -17,6 +17,16 @@ public class LineNumberTableAttribute implements AttributeInfo {
 
     }
 
+    public int getLineNumber(int pc) {
+        for(int i = lineNumberTable.length - 1; i >= 0; i--){
+            LineNumberTableEntry entry = this.lineNumberTable[i];
+            if(pc >= entry.startPc){
+                return entry.lineNumber;
+            }
+        }
+        return -1;
+    }
+
     private class LineNumberTableEntry {
         int startPc;
         int lineNumber;

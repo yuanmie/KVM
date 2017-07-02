@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class JVMStack {
     long maxSize;
-    long size;
+    int size;
     JVMFrame _top;
 
     public JVMStack(long maxSize) {
@@ -46,5 +46,22 @@ public class JVMStack {
 
     public boolean isEmpty() {
         return this._top == null;
+    }
+
+    public void clear() {
+        while(!this.isEmpty()){
+            this.pop();
+        }
+    }
+
+    public JVMFrame[] getFrames() {
+        JVMFrame[] frames = new JVMFrame[this.size];
+        int index = 0;
+        JVMFrame current = _top;
+        while(current != null){
+            frames[index++] = current;
+            current = current.getLower();
+        }
+        return frames;
     }
 }

@@ -2,7 +2,9 @@ package Native;
 
 import instructions.base.Method_invoke_logic;
 import rtda.JVMFrame;
+import rtda.JVMThread;
 import rtda.LocalVars;
+import rtda.StackTraceElement;
 import rtda.heap.*;
 import tool.Tool;
 
@@ -134,6 +136,40 @@ public class Native {
                 "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;");
         Method_invoke_logic.InvokeMethod(frame, setPropMethod);
     };
+    private static Consumer<JVMFrame> fillInStackTrace = (frame)->
+    {
+        JVMObject t = frame.getLocalVars().getThis();
+        frame.getOperandStack().pushRef(t);
+        StackTraceElement[] stes = createStackTraceElements(t, frame.getThread());
+        t.extra = stes;
+    };
+
+    private static StackTraceElement[] createStackTraceElements(JVMObject t, JVMThread thread) {
+        int skip = distanceToObject(t.klass) + 2;
+        JVMFrame[] frames = thread.getFrames();
+        int len = frames.length - skip;
+        StackTraceElement[] stes = new StackTraceElement[len];
+        for(int i = 0; i < len; i++){
+            stes[i] = createStackTraceElement(frames[i + skip]);
+        }
+        return stes;
+    }
+
+    private static StackTraceElement createStackTraceElement(JVMFrame frame) {
+        JVMMethod method = frame.getMethod();
+        JVMClass klass = method.klass;
+        return new StackTraceElement(klass.sourceFile(),
+                klass.javaName(), method.name, method.getLineNumber(frame.getNextPc() - 1));
+    }
+
+    private static int distanceToObject(JVMClass klass) {
+        int distance = 0;
+        for(JVMClass c = klass.getSuperclass(); c != null; c = c.getSuperclass()){
+            distance++;
+        }
+        return distance;
+    }
+
 
     private static void ArrayCopy(JVMObject src, JVMObject dest, int srcPos, int destPos, int length) {
         switch (src.fields.getArrayType()){
@@ -235,5 +271,7 @@ public class Native {
         register("java/lang/Object", "clone", "()Ljava/lang/Object;", jclone);
 
         register("sun/misc/VM", "initialize", "()V", initialize);
+
+        register("java/lang/Throwable", "fillInStackTrace", "(I)Ljava/lang/Throwable;", fillInStackTrace);
     }
 }

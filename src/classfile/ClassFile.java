@@ -126,4 +126,13 @@ public class ClassFile {
     public AttributeInfo[] getAttributes() {
         return attributes;
     }
+
+    public SourceFileAttribute getSourceFileAttribute() {
+       for(AttributeInfo attr : this.attributes){
+           if(attr instanceof SourceFileAttribute){
+               return (SourceFileAttribute) attr;
+           }
+        }
+        return null;
+    }
 }

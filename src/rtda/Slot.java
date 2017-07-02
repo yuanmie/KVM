@@ -13,6 +13,12 @@ public class Slot {
     public Slot(){
 
     }
+
+    public Slot(Slot s){
+        this.ref = s.ref;
+        this.num = s.num;
+        this.assertType = s.assertType;
+    }
     public int getNum() {
         if(this.assertType != NUMTYPE){
             Tool.panic("something wrong");

@@ -55,14 +55,8 @@ public class OperandStack {
     }
 
     public void pushRef(JVMObject ref){
-
         dealSlot();
-        if(ref == null){
-            this.slots[(int)this.size] = null;
-        }else{
-            this.slots[(int)this.size].setRef(ref);
-        }
-
+        this.slots[(int)this.size].setRef(ref);
         ++this.size;
     }
 
@@ -112,5 +106,12 @@ public class OperandStack {
 
     public void pushBoolean(boolean b) {
         this.pushInt((b ? 1 : 0));
+    }
+
+    public void clear() {
+        this.size = 0;
+        for(int i = 0; i < slots.length; i++){
+            slots[i] = null;
+        }
     }
 }

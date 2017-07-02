@@ -9,9 +9,8 @@ public class INEG extends NoOperandsInstruction{
     public void execute(JVMFrame frame) {
         OperandStack stack = frame.getOperandStack();
         int v1 = stack.popInt();
-        int v2 = stack.popInt();
 
-        int r = v1 + v2;
+        int r = -v1;
         stack.pushInt(r);
     }
 }

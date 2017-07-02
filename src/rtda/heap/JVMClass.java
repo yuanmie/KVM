@@ -1,6 +1,7 @@
 package rtda.heap;
 
 import classfile.ClassFile;
+import classfile.SourceFileAttribute;
 import rtda.JVMFrame;
 import rtda.JVMThread;
 import rtda.LocalVars;
@@ -22,6 +23,7 @@ public class JVMClass {
     int instanceSlotCount;
     int staticSlotCount;
     LocalVars staticVars;
+    private String sourceFile;
 
     public JVMClass(int accessFlag, String name, JVMClassLoader loader, boolean initStarted) {
         this.accessFlag = accessFlag;
@@ -127,6 +129,15 @@ public class JVMClass {
         this.cp = new JVMConstantPool(this, cf.getConstantPool());
         this.fields = JVMField.newFields(this, cf.getFields());
         this.methods = JVMMethod.newMethods(this, cf.getMethods());
+        this.sourceFile = getSourceFile(cf);
+    }
+
+    private String getSourceFile(ClassFile cf) {
+        SourceFileAttribute sfAttr = cf.getSourceFileAttribute();
+        if(sfAttr != null){
+            return sfAttr.FileName();
+        }
+        return "unknown";
     }
 
     public boolean IsPublic()  {
@@ -433,5 +444,9 @@ public class JVMClass {
 
     public JVMMethod getInstanceMethod(String name, String descriptor) {
         return this.getMethod(name, descriptor, false);
+    }
+
+    public String sourceFile() {
+        return sourceFile;
     }
 }
